@@ -1,0 +1,20 @@
+{
+  "name": "ts-github-report",
+  "version": "1.0.0",
+  "description": " Building command line utility GitHub-Report: Pass in GitHub username then it makes the REST API call to GitHUB and get some information about the user and some of the top repos for the user like the the number forks.",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node out/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yanga93/TS-GITHUB-REPORT.git"
+  },
+  "author": "Yanga Zukelwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yanga93/TS-GITHUB-REPORT/issues"
+  },
+  "homepage": "https://github.com/Yanga93/TS-GITHUB-REPORT#readme"
+}
