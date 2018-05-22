@@ -7,21 +7,18 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var request = __importStar(require("request"));
+const request = __importStar(require("request"));
 /*This class contains a method
 that will make API call.
 */
-var GithubService = /** @class */ (function () {
-    function GithubService() {
-    }
+class GithubService {
     //this is the method that make API call
-    GithubService.prototype.getUserInfo = function (userName) {
-        request.get('https://api.github.com/users/jharding' + userName, function (response) {
+    getUserInfo(userName) {
+        request.get('https://api.github.com/users/jharding' + userName, (response) => {
             console.log(response);
         });
-    };
-    GithubService.prototype.getRepos = function () {
-    };
-    return GithubService;
-}());
+    }
+    getRepos() {
+    }
+}
 exports.GithubService = GithubService;
