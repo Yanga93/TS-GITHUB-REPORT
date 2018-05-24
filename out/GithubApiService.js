@@ -14,7 +14,7 @@ that will make API call.
 class GithubService {
     //this is the method that make API call
     getUserInfo(userName) {
-        request.get('https://api.github.com/users/jharding' + userName, (response) => {
+        request.get('jharding.json' + userName, (response) => {
             console.log(response);
         });
     }
