@@ -12,13 +12,21 @@ const request = __importStar(require("request"));
 that will make API call.
 */
 class GithubService {
-    //this is the method that make API call
-    getUserInfo(userName) {
-        request.get('jharding.json' + userName, (response) => {
-            console.log(response);
-        });
-    }
-    getRepos() {
-    }
 }
 exports.GithubService = GithubService;
+let options = {
+    headers: {
+        'User-Agent': 'request'
+    }
+};
+//this is the method that make API call
+getUserInfo(userName, string);
+{
+    request.get('https://api.github.com/users/' + userName, options, (error, response, body) => {
+        let user = new User(JSON.parse(body));
+        console.log(user);
+    });
+}
+getRepos();
+{
+}
