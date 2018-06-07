@@ -9,6 +9,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const request = __importStar(require("request"));
 const User_1 = require("./User");
+const Repo_1 = require("./Repo");
 const OPTIONS = {
     headers: {
         'User-Agent': 'request'
@@ -26,7 +27,11 @@ class GithubService {
             cb(user);
         });
     }
-    getRepos() {
+    getRepos(userName, cb) {
+        request.get('https://api.github.com/users/' + userName + '/repos', OPTIONS, (error, response, body) => {
+            var repos = body.map((repo) => new Repo_1.Repo(repo));
+            cb(repos);
+        });
     }
 }
 exports.GithubService = GithubService;

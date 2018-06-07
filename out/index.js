@@ -6,3 +6,6 @@ let svc = new GithubApiService_1.GithubService();
 svc.getUserInfo('yanga93', (user) => {
     console.log(user);
 });
+svc.getRepos('yanga93', (repos) => {
+    console.log(repos);
+});
