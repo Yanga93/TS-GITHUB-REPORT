@@ -9,7 +9,7 @@ class User {
         this.login = userResponse.login;
         this.fullName = userResponse.name;
         this.repoCount = userResponse.public_repos;
-        //  this.followerCount = userResponse.followers;
+        this.followerCount = userResponse.followers;
     }
 }
 exports.User = User;

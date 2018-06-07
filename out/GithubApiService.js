@@ -9,26 +9,24 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const request = __importStar(require("request"));
 const User_1 = require("./User");
-/*This class contains a method
-that will make API call.
-*/
-class GithubService {
-}
-exports.GithubService = GithubService;
-let options = {
+const OPTIONS = {
     headers: {
         'User-Agent': 'request'
     },
     json: true
 };
-//this is the method that make API call
-getUserInfo(userName, string);
-{
-    request.get('https://api.github.com/users/' + userName, options, (error, response, body) => {
-        let user = new User_1.User(body);
-        console.log(user);
-    });
+/*This class contains a method
+that will make API call.
+*/
+class GithubService {
+    //this is the method that make API call
+    getUserInfo(userName, cb) {
+        request.get('https://api.github.com/users/' + userName, OPTIONS, (error, response, body) => {
+            let user = new User_1.User(body);
+            cb(user);
+        });
+    }
+    getRepos() {
+    }
 }
-getRepos();
-{
-}
+exports.GithubService = GithubService;
