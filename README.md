@@ -13,6 +13,16 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
+TypeScript verion 2.8.3
+```
+```
+npm verion 5.5.1
+```
+```
+node version 9.2.0
+```
+
+```
 clone the repo using command line: git clone https://github.com/Yanga93/TS-GITHUB-REPORT.git
 ```
 
@@ -24,6 +34,9 @@ Step will be
 
 ```
 run npm install in your command line to install all the dependencies for this project.
+```
+```
+run: npm start github-username
 ```
 
 GITHUB API for this project:

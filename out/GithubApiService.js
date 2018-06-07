@@ -16,11 +16,7 @@ const OPTIONS = {
     },
     json: true
 };
-/*This class contains a method
-that will make API call.
-*/
-class GithubService {
-    //this is the method that make API call
+class GithubApiService {
     getUserInfo(userName, cb) {
         request.get('https://api.github.com/users/' + userName, OPTIONS, (error, response, body) => {
             let user = new User_1.User(body);
@@ -34,4 +30,4 @@ class GithubService {
         });
     }
 }
-exports.GithubService = GithubService;
+exports.GithubApiService = GithubApiService;
